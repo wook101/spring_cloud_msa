@@ -4,3 +4,14 @@ server:
 spring:
   application:
     name: display
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 3000 #default 1초
+      circuitBreaker:
+        requestVolumeThreshold: 1 #default 20
+        erorrThresholdPercentage: 50 #defalut 50
