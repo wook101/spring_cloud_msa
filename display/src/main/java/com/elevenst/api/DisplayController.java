@@ -23,6 +23,6 @@ public class DisplayController {
     @GetMapping(path = "/{displayId}")
     public String getDisplayDetail(@PathVariable String displayId) {
         String productInfo = productRemoteService.getProductInfo("22222");
-        return String.format("[display id = %s at %s %s ]", displayId, System.currentTimeMillis(), productInfo);
+        return String.format("[display id = %s at %s product: %s ]", displayId, System.currentTimeMillis(), productInfo);
     }
 }
